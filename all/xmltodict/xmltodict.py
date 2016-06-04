@@ -2,7 +2,7 @@
 "Makes working with XML feel like you are working with JSON"
 
 try:
-    import defusedexpat as expat
+    from defusedexpat import pyexpat as expat
 except ImportError:
     from xml.parsers import expat
 from xml.sax.saxutils import XMLGenerator
@@ -32,7 +32,7 @@ except NameError:  # pragma no cover
     _unicode = str
 
 __author__ = 'Martin Blech'
-__version__ = '0.10.1'
+__version__ = '0.10.2'
 __license__ = 'MIT'
 
 
